@@ -1,0 +1,39 @@
+.ball {
+    display: inline-block;
+    height: 30px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 0px;
+    z-index: -1;
+}
+
+/*.ball:before,*/
+.ball:after {
+    content: "💖";  /* 💗 🍔 🐟 🥱 😪 🤗 ❤️‍🔥 💖 ❣️ 🥰 🍗 🍖 🥩*/ 
+
+    width: 30px;
+}
+
+.ball:before {
+    top: -15px;
+    left: 0;
+}
+
+.ball:after {
+    left: 15px;
+    top: 0;
+}
+
+.ball {
+    position: absolute;
+    transform: scale(2, 0.5);
+    font-size: 3rem;
+    color: red;
+}
+
+
+/* 😿 🙀  😻 😹 🐱 🐲  🐺 🐶*/
+
+/* https://emojiterra.com/fr/search/ */

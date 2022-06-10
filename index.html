@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/fondcss.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+
+
+</head>
+<body>
+
+
+    <header>
+        <div id="coterG">
+            <h1>TAMAGOSHI</h1>
+
+            <button id="openAnimalerie">Changez d'animal</button>
+            <button class="open-shop">open shop</button>
+
+        </div>
+        <div id="blocInfo"> <!-- Bloc INFO -->
+            <h2 id="nomDoc"></h2> <!-- NAME -->
+
+
+            <div id="infoLife">
+               <h3>Faim : <span id="bddFaim"></span>/ <span id="MaxFood"></span></h3>
+                <h3>Amour : <span id="bddAmour"></span>/ <span id="MaxAmour"></span></h3>
+                <h3>Fatigue : <span id="bddTyred"></span>/ <span id="MaxTyred"></span></h3>
+            </div>
+
+            <h2 id="bourse"></h2>
+        </div>
+
+        <img id="animol" src="assets/img/baby_cat.png" alt="chat">
+    </header>
+
+    <aside id="back-inscrit"> 
+        <h2>Créer ton Animal</h2>       
+        <form id="inscription">    
+            <label for="name">Nom : </label>    
+            <input type="text" name="name" id="name">   
+
+            <label for="choose-race">Choisisez la race:</label> 
+
+            <select name="race" id="choose-race">   
+                <option value="">--choisir une race--</option>  
+                <option value="chien">Chien</option>    
+                <option value="chat">Chat</option>  
+                <option value="cheval">Cheval</option>  
+                <option value="dragon">Dragon</option>  
+                <option value="loup">loup</option>  
+            </select>
+
+            <button id="create">Créer mon animal</button>
+
+        </form>
+    </aside>
+    <aside id="popup"></aside>
+
+
+    <aside class="shop">
+        <div id="closeUn" class="close"></div>
+
+        <h2>Shoppy</h2>
+        <nav>
+            <ul>
+                <li><a id="openBouf" href="#">Bouf</a></li>
+                <li><a id="openMoove" href="#">Moove</a></li>
+
+            </ul>
+        </nav>
+        <h2 style="text-align: left;">
+            nos articles : 
+        </h2>   
+        <section id="boufShop" class="scroller shoppy">
+                   
+            <div class="clear"></div>
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>pathé | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>pathé | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>pathé | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>pathé | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>pathé | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>pathé | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>pathé | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article >
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>pathé | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>pathé | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>
+ 
+        </section>
+
+        <section id="MooveShop"  class="scroller shoppy">
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>moove | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>   
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>moove | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>   
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>moove | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>   
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>moove | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>   
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>moove | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>   
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>moove | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>   
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>moove | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>   
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>moove | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>   
+            <article class="ArtBoufShop">
+                <img src="assets/img/pather.png" alt="el pather pour el chatos">
+                <h3>moove | <span>2.30€</span></h3>
+                <button>Achettez</button>
+            </article>   
+        </section>
+
+    </section>
+    </aside>
+
+
+    <aside id="animalerie">
+        <div id="closeDeux" class="close"></div>
+        <h2 class="tac">Mes animeaux :</h2>
+        <button id="createAni">Créer un animal</button>
+        
+            <section id="mesAnimeaux" class="scroller">
+                <!-- <article class="ArtAnimalerie">
+                    <div class="blocCatArie">
+
+                    </div>
+                    <h4>Prénom : Feur</h4>
+                    <h4>Age : 10 ans</h4>
+                    <h4>Race : Chien</h4>
+
+
+                </article> -->
+      
+
+            </section>
+    </aside>
+    
+    <main>
+        <button id="btnManger"  class="btn-act">Manger</button>
+        <button id="btn-play" class="btn-act btnBas">Jouez</button>
+        <button id="btn-fight" class="btn-act">Combattre</button>
+        <button id="btn-dodo" class="btn-act">dormir</button>
+        <button id="btn-hug" class="btn-act btnBas">Calin</button>
+        <button id="btn-caresse" class="btn-act">Caresse</button>
+
+    </main>
+
+
+    <aside id="Inv-Bouf">
+        <h2>Nourtiture</h2>
+  
+        <table class="tg">
+  
+            <tbody>
+              <tr>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+              </tr>
+           
+
+            </tbody>
+            </table>
+        
+    </aside>
+
+    
+        <!-- <script src="assets/js/fond.js"></script> -->
+        <script src="assets/js/script.js"></script>
+</body>
+</html>

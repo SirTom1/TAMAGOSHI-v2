@@ -1,0 +1,290 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: url(../img/background.jpg);
+  background-repeat: no-repeat;
+
+}
+
+#back-inscrit{ 
+    width: 25vw;
+    position: fixed;
+    left: 37vw;
+    text-align: center;
+    background-color: darkolivegreen;
+    padding: 1% 0%;
+    color: white;
+    top: 0;
+}
+label{
+    margin-top: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+#create{
+    margin-top: 30px;
+}
+
+#blocInfo{
+    background-color: aquamarine;
+    float: right;
+    width: 15%;
+    text-align: center;
+
+}
+#coterG{
+    float: left;
+}
+#infoLife{
+    background-color: antiquewhite;
+}
+h1{
+  color: white;
+}
+
+.shop{
+    width: 40vw;
+    position: fixed;
+    left: 28vw;
+    text-align: center;
+    background-color: darkolivegreen;
+    color: white;
+    display: none;
+    top: 0px;
+    z-index: 1;
+  }
+
+.deroule{
+    animation: 1s linear 0.5ms deroulant forwards;
+    -webkit-animation: 1s linear 0.5ms deroulant forwards;
+    display: block;
+}
+
+.remballe{
+    animation: 1s linear 0.5ms rembalent forwards;
+    -webkit-animation: 1s linear 0.5ms rembalent forwards;
+}
+
+  @keyframes deroulant {
+    from {
+      height: 0vh;
+    }
+  
+    to {
+      height: 80vh;
+    }
+  }
+  
+  @keyframes rembalent {
+    from {
+      height: 80vh;
+
+    }
+  
+    to {
+        height: 0vh;
+    }
+  }
+  
+.close{
+    width: 3%;
+    height: 20px;
+    background-color: black;
+    float: right;
+}
+#closeUn{
+    display: none;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    border: solid black 1px;
+    list-style: none;
+    
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+img{
+    width: 100%;
+
+}
+.clear{
+    clear: both;
+}
+
+section{
+    display: flex;
+
+  
+  }
+  #mesAnimeaux{
+      flex-direction: column;
+  }
+  .shoppy{
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+.ArtBoufShop{
+    width: 20%;
+    background: white;
+    border-radius: 10%;
+    color: black;
+    flex-basis: 26%;
+    margin: 2%;
+}
+.ArtAnimalerie{
+    width: 96%;
+    background: white;
+    border-radius: 20px;
+    color: black;
+    flex-basis: 32%;
+    margin: 2%;
+  }
+.blocCatArie{
+    background-color: aquamarine;
+    width: 31%;
+    height: 18vh;
+    float: left;
+    border-radius: 22px;
+    margin-right: 20px;
+  }
+#MooveShop{
+    display: none;
+}
+
+.scroller {
+    width: 100%;
+    height: 56vh;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+  }
+
+  #animalerie{
+    width: 33%;
+    height: 33vw;
+    background-color: bisque;
+    position: fixed;
+    left: 33vw;
+    top: 155px;
+    display: none;
+    z-index: 1;
+  }
+  .tac{
+      text-align: center;
+  }
+
+  main{
+    position: fixed;
+    top: 449px;
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+
+  .btn-act{
+    width: 10%;
+    height: 50px;
+  }
+
+.btnBas{
+  margin-top: 10%;
+
+}
+
+#animol{
+  width: 15%;
+  margin-left: 30%;
+}
+#Inv-Bouf{
+  background-color: wheat;
+  z-index: 1;
+  position: fixed;
+  top: 10%;
+  left: 40%;
+  display: none;
+}
+ /* inventaire */
+.tg  {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+.tg td{
+  border-color:black;
+  border-style:solid;
+  border-width:1px;
+  font-family:Arial, sans-serif;
+  font-size:14px;
+  overflow:hidden;
+  padding:30px;
+  word-break:normal;
+}
+
+.tg .tg-0lax{
+  text-align:left;
+  vertical-align:top
+}
+
+#desc_Bouf{
+  height: 100%;
+}
+ /* fin */
+
+
+ /*POPUP*/
+
+ .pop{
+  animation: 1s linear 0.5ms pop forwards;
+  -webkit-animation: 1s linear 0.5ms pop forwards;
+}
+
+.up{
+  animation: 1s linear 0.5ms up forwards;
+  -webkit-animation: 1s linear 0.5ms up forwards;
+}
+
+@keyframes pop {
+  from {
+      left : -500px
+  }
+
+  to {
+      left : 0px;
+  }
+}
+
+@keyframes up {
+  from {
+  left : 0px;
+
+  }
+
+  to {
+      left : -500px
+  }
+}
+
+#hidde{
+  display: none;
+}
+
+#block{
+  display: block;
+}
+
+/* fin x*/
