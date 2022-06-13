@@ -69,10 +69,6 @@ h1{
     display: block;
 }
 
-.remballe{
-    animation: 1s linear 0.5ms rembalent forwards;
-    -webkit-animation: 1s linear 0.5ms rembalent forwards;
-}
 
   @keyframes deroulant {
     from {
@@ -84,16 +80,7 @@ h1{
     }
   }
   
-  @keyframes rembalent {
-    from {
-      height: 80vh;
-
-    }
-  
-    to {
-        height: 0vh;
-    }
-  }
+ 
   
 .close{
     width: 3%;
@@ -279,11 +266,11 @@ section{
   }
 }
 
-#hidde{
+.hidde{
   display: none;
 }
 
-#block{
+.show{
   display: block;
 }
 

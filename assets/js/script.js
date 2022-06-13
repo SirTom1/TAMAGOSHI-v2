@@ -1,3 +1,5 @@
+// 'use strict';
+
 // ici on appelle 
 let inscription = document.getElementById('inscription');
 let nom = document.getElementById('name');
@@ -35,6 +37,8 @@ let btnHUG = document.getElementById('btn-hug');
 let btnCaresse = document.getElementById('btn-caresse');
 
 let popup = document.getElementById('popup');
+
+let addArt = document.getElementById('addArt');
 
 
 // les systemes 
@@ -361,6 +365,7 @@ function créon(prenom, race ) {
     let bloc = document.createElement('div');
     let titre = document.createElement('h2');
     let desc = document.createElement('p');
+    let ferm = document.createElement('div');
     // et lui donne un peu de contenu
     bloc.style.width = "35vw";
     bloc.style.height = "90vh";
@@ -369,8 +374,7 @@ function créon(prenom, race ) {
     bloc.style.left = "32vw"
     bloc.style.zIndex = "2";
     bloc.style.backgroundColor = "gray";
-    bloc.style.display = "none";
-
+    bloc.style.display = "block";
     titre.innerText = "Notre Guide :"
     titre.style.marginLeft = "10px"; 
 
@@ -385,3 +389,109 @@ function créon(prenom, race ) {
 
     Guide()
     
+// constructor de shop items
+
+// class Items{
+//     constructor(name , price, refimg){
+//         this.name = name;
+//         this.price = price;
+//         this.price = refimg
+//     }
+
+// }
+
+// class Nourriture extends Items{
+//     constructor( name , price, refimg,faim){
+//         super( name , price, refimg , faim );
+//         this.faim = faim;
+//     }
+// }
+
+// class Pathe extends Nourriture{
+//     constructor( name , price, refimg,faim){
+//         super(name , price, refimg,faim);
+//         this.name = "pathé";
+//         this.price = 1;
+//         this.faim = 20;
+//         this.refimg = "../assets/img/pather.png";
+
+//     }
+// }
+
+// console.log(Pathe);
+    // create shop 
+
+function creerdesArt(reffimg, prixe, monName) {
+    // crée un nouvel élément div
+    let Art = document.createElement('article');
+    let ref = document.createElement('img');
+    let title = document.createElement('h3');
+    let price = document.createElement('span');
+    let btnBuy = document.createElement('button');
+    // et lui donne un peu de contenu
+    Art.classList = 'ArtBoufShop';
+    ref.src = reffimg;
+    title.innerText = monName + ' | ';
+    price.innerText = prixe + " €";
+
+    btnBuy.innerText = "Achettez";
+
+    
+    // ajoute le nœud texte au nouveau div créé
+    boufShop.appendChild(Art).appendChild(ref);
+    boufShop.appendChild(Art).appendChild(title).appendChild(price);
+    boufShop.appendChild(Art).appendChild(btnBuy); 
+    console.log('test')
+  
+}
+let invItemsBouf = [];
+
+
+let invBouf = [];
+function ItemsBouf(price, name, miam, reffimg) {
+    this.price = price;
+    this.name = name;
+    this.miam = miam;
+    this.reffimg = reffimg;
+    creerdesArt(this.reffimg, this.price, this.name);
+    console.log('created');
+}
+
+
+addArt.addEventListener('click', function(params) {
+    let pri = prompt('le prix ?')
+    let nom = prompt('le nom');
+    let faim = prompt('il sera rassasié de combien')
+    let laref = prompt("la ref de l'image ");
+    let newbouf = new ItemsBouf(pri, nom, faim, laref);
+
+})
+
+let pathee = new ItemsBouf(2, "Pathé", 20, 'assets/img/pather.png')
+invItemsBouf.push(pathee);
+
+// 
+window.addEventListener("keyup", function (event) {
+    if (event.defaultPrevented) {
+      return; // Ne devrait rien faire si l'événement de la touche était déjà consommé.
+    }
+  
+    switch (event.key) {
+      case "i":
+        Guide();
+        // Faire quelque chose pour la touche "flèche vers le bas" pressée.
+        console.log('info')
+        break;
+      case "c":
+        // Faire quelque chose pour la touche "up arrow" pressée.
+        console.log('create shop')
+        break;
+      default:
+        return; // Quitter lorsque cela ne gère pas l'événement touche.
+    }
+  
+    // Annuler l'action par défaut pour éviter qu'elle ne soit traitée deux fois.
+    event.preventDefault();
+  }, true);
+  
+
