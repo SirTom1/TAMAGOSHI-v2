@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 // ici on appelle 
 let inscription = document.getElementById('inscription');
@@ -34,7 +34,7 @@ let btnPlay = document.getElementById('btn-play');
 let btnfight = document.getElementById('btn-fight');
 let btnDODO = document.getElementById('btn-dodo');
 let btnHUG = document.getElementById('btn-hug');
-let btnCaresse = document.getElementById('btn-caresse');
+let btndanser = document.getElementById('btn-danser');
 
 let popup = document.getElementById('popup');
 
@@ -112,7 +112,7 @@ function CreateAnimal(race, nom){
     // le max est égales a ce qui est bien et le Mod c'est ce qui vas être modulable
     let ModManFood = Math.round(this.faim /4);
     let ModManAmour = Math.round(this.amour);
-    let ModManTyred = Math.round(this.fatigue);
+    let ModManTyred = Math.round(this.fatigue*0);
 console.log(ModManFood)
     foodMod.innerHTML = ModManFood;
     amourMod.innerHTML = ModManAmour;
@@ -120,40 +120,42 @@ console.log(ModManFood)
 
 // BTN manger actif / joué 
 btnManger.addEventListener('click', function(){
-    ModManFood += 10;
+    ModManFood -= 10;
     foodMod.innerText = ModManFood;
-    ModManTyred -= 10;
+    ModManAmour += 1;
+    amourMod.innerText = ModManAmour;
+    ModManTyred += 1;
     tyerMod.innerText = ModManTyred;
     AlertPerso('Vous avez donnez A manger !', "gray")
 
 })
 // jouez
 btnPlay.addEventListener('click', function(){
-    ModManFood -= 2;
+    ModManFood += 1;
     foodMod.innerText = ModManFood;
-    ModManAmour += 15;
+    ModManAmour += 10;
     amourMod.innerText = ModManAmour;
-    ModManTyred -= 10;
+    ModManTyred += 2;
     tyerMod.innerText = ModManTyred;
 
 })
 
 // combattre
 btnfight.addEventListener('click', function(){
-    ModManFood -= 2;
+    ModManFood += 1;
     foodMod.innerText = ModManFood;
-    ModManTyred -= 10;
+    ModManTyred += 5;
     tyerMod.innerText = ModManTyred;
-    money += 25;
+    money += 10;
     bourse.innerText = money + "€";
 
 })
 
 // dodo
 btnDODO.addEventListener('click', function(){
-    ModManFood -= 10;
+    ModManFood += 5;
     foodMod.innerText = ModManFood;
-    ModManTyred += 10;
+    ModManTyred -= 50;
     tyerMod.innerText = ModManTyred;
     AlertPerso('votre animal dort !', "gray")
 
@@ -162,15 +164,21 @@ btnDODO.addEventListener('click', function(){
 btnHUG.addEventListener('click', function(){
     ModManAmour += 15;
     amourMod.innerText = ModManAmour;
-    ModManTyred -= 10;
+    ModManTyred += 1;
     tyerMod.innerText = ModManTyred;
+    ModManFood += 1;
+    foodMod.innerText = ModManFood;
+
 })
 
-btnCaresse.addEventListener('click', function(){
-    ModManAmour += 10;
+btndanser.addEventListener('click', function(){
+    ModManAmour += 5;
     amourMod.innerText = ModManAmour;
-    ModManTyred -= 5;
+    ModManTyred += 1;
     tyerMod.innerText = ModManTyred;
+    ModManFood += 1;
+    foodMod.innerText = ModManFood;
+
     AlertPerso('Vous carresez votre animal !', "gray")
 
 })
@@ -189,11 +197,11 @@ setInterval(function() {
  // deduit xd
  setInterval(function() { 
     console.log("j'ai faim"); 
-    ModManFood -= 5;
+    ModManFood -= 1;
     foodMod.innerText = ModManFood;
-    ModManAmour -= 5;
+    ModManAmour -= 1;
     amourMod.innerText = ModManAmour;
-    ModManTyred -= 5;
+    ModManTyred += 1;
     tyerMod.innerText = ModManTyred;
 
 }, 3000);
@@ -374,7 +382,7 @@ function créon(prenom, race ) {
     bloc.style.left = "32vw"
     bloc.style.zIndex = "2";
     bloc.style.backgroundColor = "gray";
-    bloc.style.display = "block";
+    bloc.style.display = "none";
     titre.innerText = "Notre Guide :"
     titre.style.marginLeft = "10px"; 
 
