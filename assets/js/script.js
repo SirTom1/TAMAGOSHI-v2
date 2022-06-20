@@ -466,7 +466,7 @@ function ItemsBouf(price, name, miam, reffimg) {
 }
 
 
-addArt.addEventListener('click', function(params) {
+addArt.addEventListener('click', function() {
     let pri = prompt('le prix ?')
     let nom = prompt('le nom');
     let faim = prompt('il sera rassasié de combien')
@@ -479,27 +479,71 @@ let pathee = new ItemsBouf(2, "Pathé", 20, 'assets/img/pather.png')
 invItemsBouf.push(pathee);
 
 // 
-window.addEventListener("keyup", function (event) {
-    if (event.defaultPrevented) {
-      return; // Ne devrait rien faire si l'événement de la touche était déjà consommé.
-    }
-  
-    switch (event.key) {
-      case "i":
-        Guide();
-        // Faire quelque chose pour la touche "flèche vers le bas" pressée.
-        console.log('info')
-        break;
-      case "c":
-        // Faire quelque chose pour la touche "up arrow" pressée.
-        console.log('create shop')
-        break;
-      default:
-        return; // Quitter lorsque cela ne gère pas l'événement touche.
-    }
-  
-    // Annuler l'action par défaut pour éviter qu'elle ne soit traitée deux fois.
-    event.preventDefault();
-  }, true);
-  
 
+
+
+
+
+/***********************************************************************************/
+/* *********************************** DONNEES *************************************/
+/***********************************************************************************/
+
+let index;
+let photos;
+let total;
+
+
+
+/***********************************************************************************/
+/* ********************************** FONCTIONS ************************************/
+/***********************************************************************************/
+
+function onClickListItem()
+{
+    let selectedPhotos;
+
+    /*
+     * Dans un gestionnaire d'évènements (et uniquement dans ce cas-là) la variable
+     * this représente l'objet DOM qui a déclenché l'évènement.
+     *
+     * Il s'agit donc de la balise <li> sur laquelle on a cliqué.
+     *
+     *
+     * On active ou on désactive la classe selected du <li> sur lequel on a cliqué.
+     */
+    this.classList.toggle('selected');
+
+    // Recherche de toutes les balises <li> sélectionnées (classe selected).
+    selectedPhotos = document.querySelectorAll('.photo-list li.selected');
+
+    /*
+     * document.querySelectorAll() renvoie un tableau avec autant
+     * d'objets DOM manipulables en JavaScript que de balises trouvées.
+     *
+     * selectedPhotos possède donc une propriété length représentant toutes les
+     * photos sélectionnées.
+     *
+     * Mise à jour du nombre total de photos sélectionnées.
+     */
+    total.textContent = selectedPhotos.length;
+}
+
+
+
+/************************************************************************************/
+/* ******************************** CODE PRINCIPAL **********************************/
+/************************************************************************************/
+
+/*
+ * Recherche de toutes les balises <li> (les photos)
+ * et de la balise <em> (nombre total).
+ */
+photos = document.querySelectorAll('article');
+total  = document.querySelector('#total em');
+
+
+// Installation d'un gestionnaire d'évènement clic sur toutes les balises <li>.
+for(index = 0; index < photos.length; index++)
+{
+    photos[index].addEventListener('click', onClickListItem);
+}

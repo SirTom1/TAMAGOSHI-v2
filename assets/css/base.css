@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+/*font-family: 'MedievalSharp', cursive;*/
+
 *{
   box-sizing: border-box;
+  font-family: 'MedievalSharp', cursive;
 }
 
 body{
-  background: url(../img/background.jpg);
+   background: url(../img/background.jpg);
   background-repeat: no-repeat;
 
 }
@@ -275,3 +279,21 @@ section{
 }
 
 /* fin x*/
+
+button{
+  width: 100%;
+  height: 50px;
+  background: #66826B;
+  border: black;
+  border-radius: 10px;
+
+}
+
+button:hover{
+  background: #3e5042;
+
+}
+button:active{
+  background: #66826B;
+
+}
